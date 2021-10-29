@@ -1,0 +1,163 @@
+/************************************* header ***********************************************/
+.header-above {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+.header-fixed {
+    position: fixed;
+}
+.header {
+    display: flex;
+    position: relative;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        li {
+            padding-left: 25px;
+            padding-right: 26px;
+            a {
+                font-size: 16px;
+                line-height: 28px;
+                color: #ffffff;
+                font-weight: 400;
+                font-family: "Poppins";
+                text-align: center;
+            }
+            &:first-child{
+                padding-left: 4px;
+            }
+            &:nth-child(3){
+                padding-right: 57px;
+            }
+            &:nth-child(4){
+                padding-left: 0px;
+            }
+            &:last-child{
+                padding-right: 43px;
+            }
+        }
+    }
+    &__logo{
+        margin-top: 22px;
+    }
+    &__nav{
+        flex: content;
+        margin-top: 39px;
+        ul {
+            li {
+                &:first-child{
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+    &__tool{
+        margin-top: 39px;
+        ul {
+            justify-content: flex-end;
+            li {
+                &:first-child{
+                    padding-right: 26px;
+                }
+                &:nth-child(2){
+                    padding-right: 28px;
+                }
+                &:last-child{
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+    &__nav-responsive {
+        display: none;
+    }
+}
+/************************************* responsive header ***********************************************/
+@media (max-width: 320px){
+    .header__nav-responsive {
+        position: absolute;
+        right: 14px;
+        top: 16px;
+    }
+    .header {
+        ul {
+            li {
+                &:last-child{
+                    padding-right: 0px;
+                }
+            }
+        }
+        &__logo {
+            margin: 11px 0;
+            img {
+                width: 65%;
+            }
+        }
+        &__nav{
+            display: none;
+        }
+        &__tool{
+            display: none;
+        }
+        &__nav-responsive {
+            display: block;
+        }
+    }
+    .responsive {
+        .header__nav-responsive {
+            top: 6px;
+        }
+        .header {
+            display: block;
+            text-align: left;
+            ul {
+                display: block;
+                text-align: left;
+                li {
+                    padding: 0;
+                    a {
+                        font-size: 10px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            &__logo{
+                margin: 15px 0;
+                img {
+                    width: 45%;
+                }
+            }
+            &__nav{
+                display: block;
+                margin-top: 8px;
+                ul {
+                    li {
+                        &:hover {
+                            background: darkslategrey;
+                        }
+                    }
+                }
+            }
+            &__tool{
+                display: block;
+                margin-top: 0px;
+                ul {
+                    li {
+                        &:hover {
+                            background: darkslategrey;
+                        }
+                    }
+                }
+            }
+            &__nav-responsive {
+                a {
+                    font-size: 16px !important;
+                    line-height: 28px !important;
+                }
+            }
+        }
+    }
+}
