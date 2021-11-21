@@ -104,7 +104,6 @@
             }
         }
     }
-
 }
 /************************************* product ***********************************************/
 .product {
@@ -193,6 +192,12 @@
         h5 {
             font-size: 14px;
         }
+        a {
+            text-decoration: none;
+            &:hover {
+                color: #dd2f31;
+            }
+        }
     }
     &__content__image--margin1 {
         margin-top: 45px;
@@ -227,7 +232,9 @@
         }
         &:hover {
             background-color: #dd2f31;
-            color: #ffffff;
+            i {
+                color: #ffffff;
+            }
         }
     }
     
@@ -309,72 +316,108 @@
     }
 }
 /************************************* responsive ***********************************************/
- @media (max-width: 320px) {
+@media (max-width: 1080px) {
+    /**************** introduce ****************/
+    .introduce {
+        .col {
+            height: 221px;
+        }
+    }
+} 
+@media (max-width: 1024px) {
+    /**************** introduce ****************/
+    .introduce {
+        .col {
+            height: 209px;
+        }
+        &__icon{
+            padding:  14px 20px 0 20px;
+        }
+        .col {
+            &:nth-child(4) {
+                .introduce__icon {
+                    padding:  25px 20px 0 20px;
+                }
+            }
+        }
+    }
+    /************************************* feedback ***********************************************/
+    .feedback {
+        margin-top: 82px;
+        &__box {
+            margin-top: 45px;
+            &__text {
+                p {
+                    padding: 1px 180px;
+                }
+            }
+        }
+    }
+    /************************************* brands ***********************************************/
+    .brands {
+        margin-top: 66px;
+        .owl-carousel .owl-stage-outer {
+            padding: 0px 13px;
+        }
+        .item {
+            .image1 {
+                margin: 0px;
+            }
+            .image2 {
+                margin: 0px;
+            }
+            .image3 {
+                margin: 0px;
+            }
+            .image4 {
+                margin: 18px 0px;
+            }
+            .image5 {
+                margin: 13px 0px;
+            }
+            .image6 {
+                margin: 7px 0px;
+            }
+        }
+        &__content {
+            margin-top: 38px;
+        }
+    }
+}
+@media (max-width: 800px) {
     /**************** banner ****************/
     .banner {
-        height: 450px;
+        height: 833px;
     }
-    .banner__content { 
-        padding: 0;
-        .content__big-text {
-            h3 {
-                font-size: 24px;
-            }
-        }
-        .content__small-text {
-            h5 {
-                font-size: 17px;
-                margin-bottom: 0px;
-                padding-bottom: 5px;
-            }
-            p {
-                width: 238px;
-                height: 61px;
-                font-size: 6px;
-                line-height: 12px;
-            }
-        }
+    .banner__content {
         .content__button {
             .btn-shop {
-                margin-top: 0px;
-                font-size: 9px;
-                line-height: 21px;
-                padding: 4px 19px;
+                margin-top: 58px;
             }
         }
     }
     /**************** introduce ****************/
     .introduce {
-        &__icon{
-                padding: 3px 3px 0 3px;
-                width: 100%;
-                height: 100%;
-            &-image {
-                img {
-                    width: 22px;
-                    height: 23px;
-                }
-            }
-            &-text {
-                h6 {
-                    font-size: 6px;
-                    margin-top: 0;
-                }
-                p {
-                    font-size: 4px;
-                    line-height: 5px;
-                    margin-top: 0px;
+        &--top {
+            padding: 0px;
+            .col {
+                padding: 0px;
+                margin: 30px 0;
+                height: 221px;
+                width: calc(100% / 2);
+                &:nth-child(2n){
+                    margin: 40px 0;
                 }
             }
         }
     }
     /**************** product ****************/
     .product {
-        margin-top: 17px;
+        margin-top: 26px;
         &__tabs {
             .row {
                 .col {
-                    margin-right: 30px;
+                    width: calc(100%/3);
                 }
             }
             ul {
@@ -392,101 +435,157 @@
                     margin-right: 0px !important;
                     padding-bottom: 0px !important;
                     a {
-                        font-size: 7px;
+                        font-size: 13px;
                         line-height: 13px;
                         font-weight: 700;
                     }
                 }
             }
         }
-        &__content--padding {
-            margin-top: 15px;
+        &__content__image--margin1 {
+            margin-top: 0px;
         }
-        &__content__image--margin {
-            margin-top: 5px;
+        &__content__image--margin2 {
+            margin-top: 0px;
         }
-        &__content__text {
-            margin-top: 2px;
-            margin-bottom: 2px;
-            margin-left: 2px;
-            font-size: 3px;
-            line-height: 6px;
+        &__content__image--margin3 {
+            margin-top: 0px;
         }
-        &__content__icon {
-            top: 2px;
-            right: 0px;
+        &__content__text3 {
+            margin-top: 0px;
         }
-        &__icon {
-            margin-top: 4px;
-            border-radius: 2px;
-            padding: 2px;
-            font-size: 2px;
+        &__content__image--margin4 {
+            margin-top: 0px;
         }
     }
     /**************** feedback ****************/
     .feedback {
         margin-top: 35px;
-        &__big-text {
-            font-size: 8px;
-            line-height: 20px;
-        }
         &__box {
-            margin-top: 15px;
-            &__image {
-                width: 28px;
-                height: 28px;
-            }
             &__text {
-                margin-top: 18px;
-                font-size: 7px;
                 p {
-                    padding: 0px;
-                    line-height: 10px;
-                }
-                h5 {
-                    margin-top: 2px;
-                    line-height: 21px;
+                    padding: 1px 44px;
                 }
             }
         }
-        .owl-dots {
-            margin-top: 3px !important;
-        }
-    }
-    .owl-theme .owl-dots .owl-dot span {
-        width: 5px;
-        height: 5px;
-        margin: 6px 4px;
     }
     /**************** brands ****************/
     .brands {
-        margin-top: 18px;
-        border-top: 1px solid #c5c5c5;
+        margin-top: 66px;
+        .owl-carousel .owl-stage-outer {
+            padding: 0px 13px;
+        }
         .item {
             .image {
-                width: 33px !important;
+                width: 61% !important;
             }
             .image1 {
-                margin:0px;
+                margin: 0px;
             }
             .image2 {
-                margin: 0px;
+                margin-top: 4px;
             }
             .image3 {
                 margin: 0px;
             }
             .image4 {
-                margin: 0px;
+                margin-top: 10px;
             }
             .image5 {
-                margin: 0px;
+                margin-top: 11px;
             }
             .image6 {
-                margin: 0px;
+                margin-top: 6px;
             }
         }
         &__content {
-            margin-top: 16px;
+            margin-top: 38px;
+        }
+    }
+}
+@media (max-width: 600px) {
+    /**************** banner ****************/
+    .banner {
+        height: 721px;
+    }
+    .banner__content {
+        left: 7%;
+        padding-left: 0px;
+        .content__big-text {
+            h3 {
+                font-size: 51px;
+                line-height: 65px;
+            }
+            h5 {
+                font-size: 35px;
+            }
+        }
+        .content__small-text{
+            p {
+                margin-top: 9px;
+            }
+        } 
+        .content__button {
+            .btn-shop {
+                margin-top: 45px;
+                padding: 11px 35px;
+                font-size: 11px;
+                line-height: 18px;
+            }
+        }
+    }
+    /**************** introduce ****************/
+    .introduce {
+        &--top {
+            padding: 0px;
+            .col {
+                padding: 0px;
+                margin: 22px 0;
+                height: 186px;
+                width: calc(100% / 2);
+                &:nth-child(2n){
+                    margin: 23px 0;
+                }
+            }
+        }
+        &__icon{
+            padding:  11px 10px 0 10px;
+            .col {
+                &:nth-child(4) {
+                    .introduce__icon {
+                        padding:  11px 10px 0 10px;
+                    }
+                }
+            }
+            &-text {
+                h6 {
+                    margin-top: 0px;
+                }
+                p {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    /**************** product ****************/
+    .product {
+        &__tabs {
+            .row {
+                .col {
+                    width: calc(100%/2);
+                }
+            }
+        }
+    }
+    /**************** feedback ****************/
+    .feedback {
+        margin-top: 35px;
+        &__box {
+            &__text {
+                p {
+                    padding: 1px 18px;
+                }
+            }
         }
     }
 }

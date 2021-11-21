@@ -99,77 +99,103 @@
     }
 }
 /************************************* responsive footer ***********************************************/
-@media (max-width: 320px){
+@media (max-width: 1080px){
+    .footer__top__text {
+        padding: 0 137px;
+    }
+}
+@media (max-width: 1024px){
     .footer{
         &__top {
-            margin-top: 10px;
-            padding-top: 32px;
-            padding-bottom: 4px;
-            &__logo {
-                margin-bottom: 14px;
-                img {
-                    width: 75px;
-                }
-            }
+            padding-top: 78px;
             &__text {
-                padding: 0 7px;
-                font-size: 5px;
-                line-height: 11px;
-            }
-            &__icon {
-                margin-top: 8px;
-                margin-left: 0px;
-                font-size: 9px;
-                line-height: 20px;
-                i {
-                    padding: 0 6px;
-                }
+                padding: 0 110px;
             }
             &__nav {
-                margin-top: 26px;
-                h4 {
-                    font-size: 8px;
-                    line-height: 10px;
-                }
-                a {
-                    font-size: 5px;
-                    line-height: 16px;
-                }
+                margin-top: 87px;
                 .nav__left {
-                    margin-top: 8px;
                     ul {
-                        margin-top: 5px;
                         li {
                             &:first-child {
                                 i {
-                                    margin-right: 7px;
+                                    margin-right: 10px;
                                 }
                             }
-                        }
-                        i {
-                            margin-right: 5px;
                         }
                     }
                 }
                 .nav__right {
-                    margin-top: 8px;
-                    margin-left: 8px;
-                    ul {
-                        margin-top: 5px;
-                    }
+                    margin-left: 38px;
                     &__item {
-                        margin-right: 15px;
-                        &:last-child {
-                            margin-right: 0px;
-                        }
+                        margin-right: 162px;
                     }
                 }
             }
         }
-        &__bottom {
-            padding: 7px 0px;
-            font-size: 5px;
-            line-height: 5px;
+    }
+}
+@media (max-width: 800px) {
+    .footer{
+        &__top {
+            padding-top: 67px;
+            margin-top: 26px;
+            &__text {
+                padding: 0 90px;
+            }
+            &__icon {
+                margin-top: 27px;
+                margin-left: 0px;
+            }
+            &__nav {
+                margin-top: 50px;
+                .nav__right {
+                    margin-left: 34px;
+                    &__item {
+                        margin-right: 47px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .footer{
+        &__top {
+            &__nav {
+                margin-top: 50px;
+                .nav__right {
+                    margin-left: 34px;
+                    &__item {
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .footer{
+        &__top {
+            &__text {
+                padding: 0 6px;
+            }
+            &__nav {
+                margin-top: 33px;
+                h4 {
+                        font-size: 12px;
+                        line-height: 22px;
+                }
+                a {
+                    font-size: 11px;
+                    line-height: 38px;
+                }
+                .nav__right {
+                    margin-left: 27px;
+                    &__item {
+                        margin-right: 42px;
+                    }
+                }
+            }
         }
     }
 }

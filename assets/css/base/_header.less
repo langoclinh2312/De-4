@@ -28,6 +28,9 @@
             }
         }
     }
+    &--backgroud {
+        display: flex;
+    }
     &__logo{
         margin-top: 22px;
     }
@@ -73,31 +76,89 @@
     }
 }
 /************************************* responsive header ***********************************************/
-@media (max-width: 320px){
+@media (max-width: 1080px){
+    .header {
+        ul {
+            li{
+                padding-left: 12px;
+            }
+        }
+        &__nav {
+            ul {
+                li{
+                    &:first-child {
+                        padding-left: 0px;
+                    }
+                    &:nth-child(3){
+                        padding-right: 35px;
+                    }
+                    &:last-child{
+                        padding-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px){
+    .header {
+        ul {
+            li{
+                padding-left: 12px;
+            }
+        }
+        &__nav {
+            ul {
+                li{
+                    &:first-child {
+                        padding-left: 0px;
+                    }
+                    &:nth-child(3){
+                        padding-right: 35px;
+                    }
+                    &:last-child{
+                        padding-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px){
+    header {
+        height: 81px;
+    }
     .header__nav-responsive {
         position: absolute;
-        right: 14px;
-        top: 16px;
+        right: 18px;
+        top: 30px;
     }
     .header {
+        height: 96px;
         ul {
             li {
                 &:last-child{
                     padding-right: 0px;
                 }
+                a {
+                    font-size: 21px;
+                    line-height: 28px;
+                }
             }
         }
         &__logo {
-            margin: 11px 0;
+            margin: 10px 0px;
             img {
-                width: 65%;
+                width: 100%;
             }
         }
         &__nav{
             display: none;
+            background: rgba(0, 0, 0, 0.6);
         }
         &__tool{
             display: none;
+            background: rgba(0, 0, 0, 0.6);
         }
         &__nav-responsive {
             display: block;
@@ -116,24 +177,27 @@
                 li {
                     padding: 0;
                     a {
-                        font-size: 10px;
-                        line-height: 24px;
+                        font-size: 15px;
+                        line-height: 29px;
                     }
                 }
             }
             &__logo{
-                margin: 15px 0;
+                margin: 10px 0;
                 img {
-                    width: 45%;
+                    width: 27%;
                 }
             }
             &__nav{
                 display: block;
-                margin-top: 8px;
+                margin-top: 10px;
                 ul {
                     li {
                         &:hover {
                             background: darkslategrey;
+                        }
+                        a {
+                            padding-left: 20px;
                         }
                     }
                 }
@@ -146,14 +210,58 @@
                         &:hover {
                             background: darkslategrey;
                         }
+                        a {
+                            padding-left: 20px;
+                        }
                     }
                 }
             }
             &__nav-responsive {
                 a {
-                    font-size: 16px !important;
-                    line-height: 28px !important;
+                    font-size: 21px !important;
+                    line-height: 26px !important;
                 }
+            }
+        }
+    }
+}
+@media (max-width: 768px){
+    .responsive {
+        .header__nav {
+            margin-top: 25px;
+        } 
+    }
+}
+@media (max-width: 600px){
+    .header {
+        height: 80px;
+        &__logo{
+                img {
+                    width: 93%;
+                }
+            }
+        ul {
+            li {
+                a {
+                    font-size: 21px;
+                    line-height: 26px;
+                }
+            }
+        }
+        &__logo {
+            margin: 17px 0px;
+        }
+    }
+    .responsive {
+        .header {
+            &__logo{
+                margin: 13px 0;
+                img {
+                    width: 33%;
+                }
+            }
+            &__nav{
+                margin-top: 0px;
             }
         }
     }
