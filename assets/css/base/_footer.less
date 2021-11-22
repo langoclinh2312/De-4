@@ -5,7 +5,7 @@
         font-family: "Poppins";
         text-align: center;
         margin-top: 35px;
-        padding-top: 101px;
+        padding-top: 99px;
         padding-bottom: 39px;
         &__logo {
             margin-bottom: 25px;
@@ -14,6 +14,7 @@
             }
         }
         &__text {
+            margin-top: 27px;
             padding: 0 195px;
             font-size: 14px;
             line-height: 24px;
@@ -40,9 +41,11 @@
             }
         }
         &__nav {
-            display: flex;
-            text-align: left;
             margin-top: 124px;
+            text-align: left;
+            .col {
+                width: calc(100%/4);
+            }
             h4 {
                 margin-left: -1px;
                 text-transform: uppercase;
@@ -57,32 +60,17 @@
                 color: #777777;
                 font-weight: 400;
             }
-            .nav__left {
-                ul {
-                    margin-top: 15px;
-                    li {
-                        &:first-child {
-                            i {
-                                margin-right: 22px;
-                            }
+            ul {
+                margin-top: 15px;
+                li {
+                    &:first-child {
+                        i {
+                            margin-right: 22px;
                         }
                     }
-                    i {
-                        margin-right: 15px;
-                    }
                 }
-            }
-            .nav__right {
-                display: flex;
-                margin-left: 38px;
-                ul {
-                    margin-top: 15px;
-                }
-                &__item {
-                    margin-right: 175px;
-                    &:last-child {
-                        margin-right: 0px;
-                    }
+                i {
+                    margin-right: 15px;
                 }
             }
         }
@@ -100,9 +88,18 @@
 }
 /************************************* responsive footer ***********************************************/
 @media (max-width: 1080px){
-    .footer__top__text {
-        padding: 0 137px;
+    .footer__top {
+        &__text {
+            padding: 0 137px;
+        }
+        &__nav {
+            a {
+                font-size: 12px;
+                line-height: 37px;
+            }
+        }
     }
+
 }
 @media (max-width: 1024px){
     .footer{
@@ -111,30 +108,10 @@
             &__text {
                 padding: 0 110px;
             }
-            &__nav {
-                margin-top: 87px;
-                .nav__left {
-                    ul {
-                        li {
-                            &:first-child {
-                                i {
-                                    margin-right: 10px;
-                                }
-                            }
-                        }
-                    }
-                }
-                .nav__right {
-                    margin-left: 38px;
-                    &__item {
-                        margin-right: 162px;
-                    }
-                }
-            }
         }
     }
 }
-@media (max-width: 800px) {
+@media (max-width: 812px) {
     .footer{
         &__top {
             padding-top: 67px;
@@ -145,15 +122,6 @@
             &__icon {
                 margin-top: 27px;
                 margin-left: 0px;
-            }
-            &__nav {
-                margin-top: 50px;
-                .nav__right {
-                    margin-left: 34px;
-                    &__item {
-                        margin-right: 47px;
-                    }
-                }
             }
         }
     }
@@ -169,6 +137,35 @@
                         margin-right: 40px;
                     }
                 }
+            }
+        }
+    }
+}
+@media (max-width: 736px) {
+    .footer{
+        &__top {
+            &__text {
+                padding: 0 66px;
+            }
+            &__nav {
+                margin-top: 50px;
+                .nav__right {
+                    margin-left: 18px;
+                    &__item {
+                        margin-right: 33px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+@media (max-width: 668px) {
+    .footer{
+        &__top {
+            &__text {
+                padding: 0 40px;
+                margin-right: 11px;
             }
         }
     }
@@ -189,13 +186,55 @@
                     font-size: 11px;
                     line-height: 38px;
                 }
-                .nav__right {
-                    margin-left: 27px;
-                    &__item {
-                        margin-right: 42px;
-                    }
+            }
+        }
+    }
+}
+@media (max-width: 415px) {
+    .footer{
+        &__top {
+            &__text {
+                padding: 0px;
+                margin: 0;
+                font-size: 11px;
+            }
+            &__nav {
+                margin-top: 33px;
+                h4 {
+                        font-size: 12px;
+                        line-height: 22px;
+                }
+                a {
+                    font-size: 11px;
+                    line-height: 38px;
+                }
+                .col {
+                    width: calc(100%/1);
                 }
             }
+        }
+        &__bottom {
+                padding: 9px 0px;
+                font-size: 11px;
+                line-height: 28px;
+        }
+    }
+}
+@media (max-width: 376px) {
+    .footer{
+        &__top {
+            margin-top: 5px;
+            padding-top: 50px;
+            &__text {
+                padding: 0px;
+                margin: 0;
+                font-size: 10px;
+            }
+        }
+        &__bottom {
+                padding: 9px 0px;
+                font-size: 11px;
+                line-height: 28px;
         }
     }
 }

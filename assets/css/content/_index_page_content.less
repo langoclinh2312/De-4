@@ -281,7 +281,12 @@
         }
     }
     .owl-dots {
-            margin-top: 29px !important;
+        margin-top: 29px !important;
+        .owl-dot {
+            span {
+                margin: 4px 5px;
+            }
+        } 
     }
 }
 /************************************* brands ***********************************************/
@@ -317,6 +322,10 @@
 }
 /************************************* responsive ***********************************************/
 @media (max-width: 1080px) {
+    .banner__content {
+        left: 0%;
+        padding-left: 15px;
+    }
     /**************** introduce ****************/
     .introduce {
         .col {
@@ -384,29 +393,18 @@
         }
     }
 }
-@media (max-width: 800px) {
-    /**************** banner ****************/
-    .banner {
-        height: 833px;
-    }
-    .banner__content {
-        .content__button {
-            .btn-shop {
-                margin-top: 58px;
-            }
-        }
-    }
+@media (max-width: 812px) {
     /**************** introduce ****************/
     .introduce {
         &--top {
             padding: 0px;
             .col {
                 padding: 0px;
-                margin: 30px 0;
-                height: 221px;
+                margin: 15px 0;
+                height: 208px;
                 width: calc(100% / 2);
                 &:nth-child(2n){
-                    margin: 40px 0;
+                    margin: 37px 0;
                 }
             }
         }
@@ -503,14 +501,79 @@
         }
     }
 }
+@media (max-width: 736px) {
+    /**************** introduce ****************/
+    .introduce {
+        &--top {
+            .col {
+                padding: 0px;
+                margin: 30px 0;
+                height: 186px;
+                width: calc(100% / 2);
+                &:nth-child(2n){
+                    margin: 44px 0;
+                }
+            }
+        }
+        &__icon{
+            padding:  11px 10px 0 10px;
+            .col {
+                &:nth-child(4) {
+                    .introduce__icon {
+                        padding:  11px 10px 0 10px;
+                    }
+                }
+            }
+            &-text {
+                h6 {
+                    margin-top: 0px;
+                }
+                p {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    /**************** product ****************/
+    .product {
+        &__tabs {
+            .row {
+                .col {
+                    width: calc(100%/2);
+                }
+            }
+        }
+    }
+    /**************** feedback ****************/
+    .feedback {
+        margin-top: 35px;
+        &__box {
+            &__text {
+                p {
+                    padding: 1px 18px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 668px) {
+    /**************** feedback ****************/
+    .feedback {
+        &__box {
+            &__text {
+                p {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 600px) {
     /**************** banner ****************/
     .banner {
         height: 721px;
     }
     .banner__content {
-        left: 7%;
-        padding-left: 0px;
         .content__big-text {
             h3 {
                 font-size: 51px;
@@ -586,6 +649,122 @@
                     padding: 1px 18px;
                 }
             }
+        }
+    }
+}
+@media (max-width: 415px) {
+    /****************** banner*****************/
+    .banner {
+        &__content {
+            .content__big-text {
+                h3 {
+                    font-size: 40px;
+                }
+            }
+            .content__small-text {
+                h5 {
+                    font-size: 32px;
+                    line-height: 52px;
+                }
+                p {
+                    line-height: 17px;
+                }
+            }
+            .content__button {
+                .btn-shop {
+                    margin-top: 25px;
+                    padding: 10px 21px;
+                }
+            }
+        }
+    }
+    /**************** introduce ****************/
+    .introduce {
+        &--top {
+            padding: 0px;
+            .col {
+                margin: 22px 0;
+                width: calc(100% / 1);
+                &:nth-child(2n){
+                    margin: 46px 0;
+                }
+            }
+        }
+    }
+    /**************** product ****************/
+    .product {
+        &__tabs {
+            .row {
+                .col {
+                    width: calc(100%/1);
+                }
+            }
+        }
+    }
+    /**************** feedback ****************/
+    .feedback {
+        margin-top: 35px;
+        &__big-text {
+            font-size: 16px;
+        }
+        &__box {
+            &__text {
+                p {
+                    padding: 0px 2px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 376px) {
+    /****************** banner*****************/
+    .banner {
+        &__content {
+            .content__big-text {
+                h3 {
+                    font-size: 35px;
+                }
+            }
+            .content__small-text {
+                h5 {
+                    font-size: 27px;
+                    line-height: 33px;
+                }
+                p {
+                    font-size: 9px;
+                    line-height: 17px;
+                }
+            }
+            .content__button {
+                .btn-shop {
+                    margin-top: 25px;
+                    padding: 10px 21px;
+                }
+            }
+        }
+    }
+    /**************** introduce ****************/
+    .introduce {
+        &--top {
+            .col {
+                &:nth-child(2n){
+                    margin: 23px 0;
+                }
+            }
+        }
+    }
+    /**************** feedback ****************/
+    .feedback {
+        &__big-text {
+            font-size: 15px;
+        }
+    }
+    /**************** brands ****************/
+    .brands {
+        margin-top: 27px;
+        &__content {
+            margin-top: 16px;
         }
     }
 }
